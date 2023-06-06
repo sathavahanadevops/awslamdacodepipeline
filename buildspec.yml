@@ -17,7 +17,7 @@ phases:
       - cd awslamdacodepipeline
       - rm -rf README.md buildspec.yml
       - cd ..
-      - zip -r lamdacode aws_codebuild_ngnix
+      - zip -r lamdacode awslamdacodepipeline
       - aws s3 ls
       - aws s3 mv lamdacode s3://ngnixcodebuild
   pre_build:
