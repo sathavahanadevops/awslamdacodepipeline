@@ -1,0 +1,13 @@
+html,body,h1,h2{
+  font-family: Tahoma, Verdana, Arial;
+}
+body{
+  background-color:white;
+}
+h1,h2,strong,a{
+  color:#a80000;
+}
+p,li{
+  font-size:14px;
+  line-height:20px;    
+}
