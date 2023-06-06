@@ -1,0 +1,34 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - yum -y update
+      - yum -y install ruby
+      - yum -y install zip
+      - yum -y install wget
+      - pwd
+      - whoami
+      - wget https://aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com/latest/install
+      - chmod +x ./install
+      - ./install auto
+      - yum -y install awscli
+      - yum -y install git
+      - git clone https://github.com/sathavahanadevops/awslamdacodepipeline.git
+      - cd awslamdacodepipeline
+      - rm -rf README.md buildspec.yml
+      - cd ..
+      - zip -r lamdacode aws_codebuild_ngnix
+      - aws s3 ls
+      - aws s3 mv lamdacode s3://ngnixcodebuild
+  pre_build:
+    commands:
+      - echo prebuild
+  build:
+    commands:
+      - echo buildstarted  
+  post_build:
+     commands:
+       - echo postbuild
+artifacts:
+  files:
+    - '**/*'
