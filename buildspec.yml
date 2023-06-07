@@ -20,7 +20,6 @@ phases:
       - zip -r lamdacode.zip awslamdacodepipeline
       - aws s3 ls
       - aws s3 mv lamdacode.zip s3://ngnixcodebuild
-      - aws cloudformation delete-stack --stack-name lamda
       - aws cloudformation delete-stack --stack-name lamda --retain-resources lamda
   pre_build:
     commands:
