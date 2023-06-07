@@ -20,6 +20,8 @@ phases:
       - zip -r lamdacode.zip awslamdacodepipeline
       - aws s3 ls
       - aws s3 mv lamdacode.zip s3://ngnixcodebuild
+      - aws cloudformation delete-stack \
+            --stack-name lambda
   pre_build:
     commands:
       - echo prebuild
