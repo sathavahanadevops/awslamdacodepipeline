@@ -1,0 +1,19 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "lambda": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "FunctionName": "lambda",
+        "Handler": "index.js",
+        "Role": "arn:aws:iam::287105042697:role/lamdacodepipeline",
+        "Code": {
+          "S3Bucket": "ngnixcodebuild",
+          "S3Key": "lamdacode.zip"
+        },
+        "Runtime": "nodejs18.x",
+        "Timeout": 300
+      }
+    }
+  }
+}
