@@ -17,7 +17,7 @@ phases:
       - cd ..
       - zip -r lamdacodetest.zip awslamdacodepipeline
       - aws s3 ls
-      - aws s3 mv lamdacode.zip s3://ngnixcodebuild
+      - aws s3 mv lamdacodetest.zip s3://ngnixcodebuild
   pre_build:
     commands:
       - echo prebuild
