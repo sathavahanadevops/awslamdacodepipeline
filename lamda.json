@@ -6,6 +6,7 @@
       "Properties": {
         "FunctionName": "lambda",
         "Handler": "index.js",
+        "Description" : "commit",
         "Role": "arn:aws:iam::287105042697:role/lamdacodepipeline",
         "Code": {
           "S3Bucket": "ngnixcodebuild",
