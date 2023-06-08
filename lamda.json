@@ -10,7 +10,7 @@
         "Role": "arn:aws:iam::287105042697:role/lamdacodepipeline",
         "Code": {
           "S3Bucket": "ngnixcodebuild",
-          "S3Key": "lamdacodetest.zip"
+          "S3Key": "thurlamdasath.zip"
         },
         "Runtime": "nodejs18.x",
         "Timeout": 300
