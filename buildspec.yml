@@ -10,7 +10,7 @@ phases:
       - yum -y install git
       - git clone https://github.com/sathavahanadevops/awslamdacodepipeline.git
       - cd awslamdacodepipeline
-      - touch test.lib
+      - touch test.libe
       - rm -rf README.md buildspec.yml
       - aws s3 ls
       - aws s3 mv lamda.json s3://cfstacklamda
@@ -21,7 +21,7 @@ phases:
       - aws s3 mv lamdacodetest.zip s3://ngnixcodebuild
       - wget https://cfstacklamda.s3.amazonaws.com/lamda.json
       - pwd
-      - aws cloudformation create-stack --stack-name lamdacodetest --template-url https://cfstacklamda.s3.amazonaws.com/lamda.json
+      - aws cloudformation update-stack --stack-name lamdacodetest --template-url https://cfstacklamda.s3.amazonaws.com/lamda.json
   pre_build:
     commands:
       - echo prebuild
