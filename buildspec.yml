@@ -16,9 +16,9 @@ phases:
       - aws s3 mv lamda.json s3://cfstacklamda
       - rm -rf lamda.json
       - cd ..
-      - zip -r lamdacodetest.zip awslamdacodepipeline
+      - zip -r thurlamdasath.zip awslamdacodepipeline
       - aws s3 ls
-      - aws s3 mv lamdacodetest.zip s3://ngnixcodebuild
+      - aws s3 mv thurlamdasath.zip.zip s3://ngnixcodebuild
       - wget https://cfstacklamda.s3.amazonaws.com/lamda.json
       - pwd
       - aws cloudformation update-stack --stack-name lamdacodetest --template-url https://cfstacklamda.s3.amazonaws.com/lamda.json
